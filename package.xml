@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Profile Progress Bar</fullName>
+    <types>
+        <members>CircularProgressController</members>
+        <members>DragandDropImageController</members>
+        <members>Header</members>
+        <members>ProfileModalController</members>
+        <members>Questionnaire</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>CompEvent</members>
+        <members>DragandDropImage</members>
+        <members>Header</members>
+        <members>ProfileTrackerModal</members>
+        <members>Questionnairecmp</members>
+        <members>Result</members>
+        <members>progresspie</members>
+        <name>AuraDefinitionBundle</name>
+    </types>
+    <types>
+        <members>Profile_Progress_Bar</members>
+        <name>CustomApplication</name>
+    </types>
+    <types>
+        <members>Progress_Bar_Question__c.Field_Api_Name__c</members>
+        <members>Progress_Bar_Question__c.Object_Name__c</members>
+        <members>Progress_Bar_Question__c.Question__c</members>
+        <members>Progress_Bar_Question__c.Weightage__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>Progress_Bar_Question__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Progress_Bar_Question__c</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>Profile_Progress_Bar_UtilityBar</members>
+        <name>FlexiPage</name>
+    </types>
+    <types>
+        <members>Progress_Bar_Question__c-Progress Bar Question Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>Progress_Bar_Question__c.All</members>
+        <name>ListView</name>
+    </types>
+    <version>48.0</version>
+</Package>

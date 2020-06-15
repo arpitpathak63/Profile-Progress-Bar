@@ -1,0 +1,49 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" controller="Questionnaire" >
+	 <aura:handler name="init" value="{!this}" action="{!c.getQuestions}"/>
+     <aura:attribute name="Question" type="Progress_Bar_Question__c[]"/> 
+    <aura:method name="parentMethod"  action="{!c.getQuestions}"/>
+     <aura:attribute name="ques" type="String"/>
+    <aura:attribute name="objects" type="String"/>
+    <aura:attribute name="fields" type="String"/>
+    <aura:attribute name="next" type="boolean" />
+    <aura:attribute name="prev" type="boolean" />
+    <aura:attribute name="test" type="boolean" />
+    <aura:attribute name="wrapper" type="Object"/>
+    <aura:attribute name="limit" type="Integer" default="1"/>
+    <aura:attribute name="offset" type="Integer" default="0"/>
+    <aura:attribute name="truthy" type="boolean" default="false" />
+    <aura:attribute name="uploads" type="boolean" default="false" />
+    <aura:attribute name="totalweightage" type="decimal" />   
+    <aura:attribute name="actualweightage" type="decimal" />    
+    <aura:registerEvent name="regInChild" type="c:CompEvent"/>
+    <aura:registerEvent name="regInChild1" type="c:CompEvent"/>
+        <div class="slds-grid">
+         <div class="slds-col slds-size_8-of-12 slds-p-left_xx-large">    
+        <aura:iteration items="{!v.wrapper.pb}" var="que">
+            
+            <div class="slds-col slds-text-align_center slds-size_12-of-12 slds-p-horizontal_small slds-text-heading_medium" >{!que.Question__c}</div>
+            <div class="slds-col slds-size_6-of-12  slds-p-bottom_large">   </div>
+            <div class="slds-grid slds-size_12-of-12 ">
+            <div class="slds-col slds-size_6-of-12 slds-p-left_large">
+            <lightning:button variant="brand" label="Previous" disabled="{!v.wrapper.showPrevious == false}"  onclick="{!c.showPrevious}" />
+            </div> 
+            <div class="slds-col slds-size_6-of-12 slds-p-left_large">
+            <lightning:button variant="brand"  onclick="{!c.Updates}" label="Update" value ="{!que.Object_Name__c}" title="{!que.Field_Api_Name__c}"/>
+            </div>
+            <div class="slds-col slds-size_6-of-12 slds-p-left_small " >
+      <lightning:button variant="brand" label="Next" disabled="{!v.wrapper.showNext == false}" onclick="{!c.showNext}" />
+            </div>
+             </div>
+           </aura:iteration> 
+             </div>
+            </div>
+          
+     <aura:if isTrue="{!v.truthy}">
+         <c:ProfileTrackerModal parent="{! this }" istruthy="{!v.truthy}" objects="{!v.objects}" fields="{!v.fields}" Question="{!v.wrapper.pb}"/>
+         <aura:set attribute="else">
+             <aura:if isTrue="{!v.uploads}" >
+              <c:DragandDropImage istruthy="{!v.uploads}" parent="{! this }" Question="{!v.wrapper.pb}" /> 
+             </aura:if>
+         </aura:set>
+     </aura:if>
+</aura:component>
