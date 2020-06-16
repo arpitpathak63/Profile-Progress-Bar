@@ -1,7 +1,7 @@
 <aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" controller="Header">
 	<aura:attribute name="Get_Result" type="String" />
     <aura:handler event="c:Result" action="{!c.getValueFromApplicationEvent}"/>
-    <aura:if isTrue="{!v.Get_Result!=100}">
+      <aura:if isTrue="{!v.Get_Result!=100}">
     <div class="slds-col slds-size_12-of-12"> 
                       <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_warning" role="alert">
 <span class="slds-assistive-text">warning</span>
@@ -17,7 +17,7 @@
 </div>
 </div>
          </div>
-          <aura:set attribute="else">
+     <aura:set attribute="else">
               
                <div class="slds-col slds-size_12-of-12">        
       <div class="demo-only" style="height:4rem">
@@ -42,5 +42,5 @@
              </div>
               
               </aura:set>
-         </aura:if> 
+    </aura:if>
 </aura:component>
