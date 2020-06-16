@@ -3,10 +3,13 @@
     <fullName>Profile Progress Bar</fullName>
     <types>
         <members>CircularProgressController</members>
+        <members>CircularProgressControllerTest</members>
         <members>DragandDropImageController</members>
         <members>Header</members>
         <members>ProfileModalController</members>
+        <members>ProfileModalControllerTest</members>
         <members>Questionnaire</members>
+        <members>Questionnairetest</members>
         <name>ApexClass</name>
     </types>
     <types>
@@ -24,6 +27,7 @@
         <name>CustomApplication</name>
     </types>
     <types>
+        <members>Account.SLAExpirationDate__c</members>
         <members>Progress_Bar_Question__c.Field_Api_Name__c</members>
         <members>Progress_Bar_Question__c.Object_Name__c</members>
         <members>Progress_Bar_Question__c.Question__c</members>
